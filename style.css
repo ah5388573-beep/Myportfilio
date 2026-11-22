@@ -1,0 +1,264 @@
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0c0c0c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #0c0c0c;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c9a66b;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 580px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.subtitle,
+.section-label {
+    color: #c9a66b;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.hero h1 span,
+.section h2 span {
+    color: #c9a66b;
+}
+
+.description {
+    color: #999;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c9a66b;
+    color: #111;
+    padding: 13px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.hero-circle {
+    width: 230px;
+    height: 230px;
+    border: 1px solid #c9a66b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c9a66b;
+    font-size: 80px;
+    box-shadow: 0 0 80px #c9a66b18;
+}
+
+/* SECTIONS */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 85px 25px;
+}
+
+.section h2 {
+    font-size: 38px;
+    margin: 15px 0 25px;
+}
+
+.about-text {
+    max-width: 650px;
+    color: #999;
+    font-size: 17px;
+}
+
+/* INTEREST CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #151515;
+    border: 1px solid #252525;
+    padding: 30px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #c9a66b;
+    transform: translateY(-6px);
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p,
+.projects p,
+.contact p {
+    color: #999;
+}
+
+/* PROJECT */
+
+.project-box {
+    background: #151515;
+    padding: 30px;
+    border-left: 3px solid #c9a66b;
+    border-radius: 5px;
+}
+
+.project-box span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #c9a66b;
+    font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact .btn {
+    margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #222;
+    color: #777;
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #151515;
+        flex-direction: column;
+        padding: 25px;
+        gap: 18px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding-top: 75px;
+    }
+
+    .hero-circle {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+}
